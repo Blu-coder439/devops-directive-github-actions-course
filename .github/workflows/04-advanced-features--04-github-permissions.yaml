@@ -5,18 +5,18 @@ on:
 # Permissions can be defined at the workflow or job level
 # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token
 
-################
-# Default Permissions
-################
-# permissions:
+# ################
+# # Default Permissions
+# ################
+# # permissions:
 #   contents: read
 #   packages: read
-################
+# ################
 
-################
-# All Permission Types
-################
-# permissions:
+# ################
+# # All Permission Types
+# ################
+# # permissions:
 #   actions: read|write|none
 #   attestations: read|write|none
 #   checks: read|write|none
@@ -31,12 +31,12 @@ on:
 #   pull-requests: read|write|none
 #   security-events: read|write|none
 #   statuses: read|write|none
-################
+# ################
 
 jobs:
   read-only-pr:
     runs-on: ubuntu-24.04
-    permissions:
+    permissions: 
       pull-requests: read # Can read PR data only
     continue-on-error: true # Avoids failing entire workflow
     steps:
